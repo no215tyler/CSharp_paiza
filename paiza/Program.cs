@@ -2,9 +2,10 @@
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        Console.WriteLine("Hello, paiza");
+        Greet greet = new Greet("NOB", "Japanese", "Hello, C#");
+        greet.Greeting();
     }
 }
 
