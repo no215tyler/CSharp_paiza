@@ -4,13 +4,15 @@ class Program
 {
     static void Main()
     {
-        int n = int.Parse(Console.ReadLine());
-        string[] strs = Console.ReadLine().Split(',');
-        //int[] nums = Array.ConvertAll(strNums, int.Parse);
-
-        foreach (string str in strs)
+        string str1 = Console.ReadLine();
+        string str2 = Console.ReadLine();
+        if (str1 == str2)
         {
-            Console.WriteLine(str);
+            Console.WriteLine("OK");
+        }
+        else
+        {
+            Console.WriteLine("NG");
         }
     }
 }
