@@ -4,17 +4,12 @@ class Program
 {
     static void Main()
     {
-        string str = Console.ReadLine();
-        string[] strArray = str.Split(' ');
-        int[] nums = Array.ConvertAll(strArray, int.Parse);
-        if (nums[0] == 1 ^ nums[1] == 1)
-        {
-            Console.WriteLine(1);
-        }
-        else
-        {
-            Console.WriteLine(0);
-        }
+        int n = int.Parse(Console.ReadLine());
+        string strNums = Console.ReadLine();
+        string[] numsArray = strNums.Split(' ');
+        int[] nums = Array.ConvertAll(numsArray, int.Parse);
+        int count = nums.Count(num => num == 1);
+        Console.WriteLine(count);
     }
 }
 
