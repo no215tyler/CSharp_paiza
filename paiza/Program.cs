@@ -5,9 +5,11 @@ class Program
 {
     static void Main()
     {
-        // Eメールアドレス C#編
-        string local = Console.ReadLine();
-        string domain = Console.ReadLine();
-        Console.WriteLine($"{local}@{domain}");
+        // N倍の文字列 C#編
+        int n = int.Parse(Console.ReadLine());
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write("*");
+        }
     }
 }
