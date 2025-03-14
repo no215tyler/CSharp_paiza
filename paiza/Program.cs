@@ -5,12 +5,9 @@ class Program
 {
     static void Main()
     {
-        // 配列基礎
-        string input = Console.ReadLine();
-        string[] strAry = input.Split(" ");
-        foreach (string str in strAry)
-        {
-            Console.WriteLine($"{str}");
-        }
+        // Eメールアドレス C#編
+        string local = Console.ReadLine();
+        string domain = Console.ReadLine();
+        Console.WriteLine($"{local}@{domain}");
     }
 }
