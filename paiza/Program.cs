@@ -5,11 +5,12 @@ class Program
 {
     static void Main()
     {
-        // N倍の文字列 C#編
-        int n = int.Parse(Console.ReadLine());
-        for (int i = 0; i < n; i++)
-        {
-            Console.Write("*");
-        }
+        // 引き算・掛け算 C#編
+        string[] nums = Console.ReadLine().Split(" ");
+        int num1 = int.Parse(nums[0]);
+        int num2 = int.Parse(nums[1]);
+        int result1 = num1 - num2;
+        int result2 = num1 * num2;
+        Console.WriteLine($"{result1} {result2}");
     }
 }
