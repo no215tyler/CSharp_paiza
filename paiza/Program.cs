@@ -1,29 +1,21 @@
 ﻿namespace paiza;
-using System.Numerics;
+using System.Linq;
 
 class Program
 {
     static void Main()
     {
-        // FizzBuzz C#編
-        for (int i = 1; i <= 100; i++)
+        List<int> nums = new List<int>();
+
+        string input;
+        while ((input = Console.ReadLine()) != null && input != "")
         {
-            if (i % 3 == 0 && i % 5 == 0)
+            if (int.TryParse(input, out var num))
             {
-                Console.WriteLine("FizzBuzz");
-            }
-            else if (i % 3 == 0)
-            {
-                Console.WriteLine("Fizz");
-            }
-            else if (i % 5 == 0)
-            {
-                Console.WriteLine("Buzz");
-            }
-            else
-            {
-                Console.WriteLine(i);
+                nums.Add(num);
             }
         }
+
+        Console.WriteLine(nums.Max());
     }
 }
