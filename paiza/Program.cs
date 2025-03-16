@@ -5,28 +5,25 @@ class Program
 {
     static void Main()
     {
-        // 乗客人数 C#編
-        // ある電車に a 人が乗っています。
-        // 駅に到着した時に b 人が降りて新たに c 人が乗車する時、
-        // 電車に乗っている乗客人数を求めてください。
-
-        // 半角スペース区切りで文字列型で配列化
-        string[] input = Console.ReadLine().Split(" ");
-
-        // 文字列型の配列を整数型の配列に変換
-        int[] nums = Array.ConvertAll(input, int.Parse);
-
-        int a = nums[0];
-        int b = nums[1];
-        int c = nums[2];
-
-        // debug
-        foreach (int num in nums)
+        // FizzBuzz C#編
+        for (int i = 1; i <= 100; i++)
         {
-            Console.WriteLine(num);
+            if (i % 3 == 0 && i % 5 == 0)
+            {
+                Console.WriteLine("FizzBuzz");
+            }
+            else if (i % 3 == 0)
+            {
+                Console.WriteLine("Fizz");
+            }
+            else if (i % 5 == 0)
+            {
+                Console.WriteLine("Buzz");
+            }
+            else
+            {
+                Console.WriteLine(i);
+            }
         }
-
-        //int result = (a - b - c);
-        //Console.WriteLine(result);
     }
 }
